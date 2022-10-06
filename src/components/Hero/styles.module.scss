@@ -1,0 +1,53 @@
+// Hero moduler styling - BEM 
+@import '../../mixin';
+.hero {
+    position: relative;
+    /* Red Linear */  
+    @include linear-gradient();
+    border-radius: 25px;
+    height: 300px;
+    margin-top: 60px; 
+    z-index: 100; 
+    @include sm{
+        height: auto;
+    }
+    &__inner{   
+        @include sm {
+            padding: 53px 18px;
+        }
+        &_leftTop{
+            content:'';
+            position: absolute;
+            width: 338px;
+            height: 338px;
+            left: 53.5px;
+            top: -39px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+        &_rightBottom{
+            content:'';
+            position: absolute;
+            width: 338px;
+            height: 338px;
+            left: 53.5px;
+            top: -39px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+        &_text{
+            position: relative;
+            @include sm {
+                font-size: 20px;
+            }
+        }
+    }
+}

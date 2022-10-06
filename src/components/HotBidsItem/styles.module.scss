@@ -1,0 +1,89 @@
+//Hot bids- ITEM ~ moduler styling - BEM 
+@import '../../mixin';  
+.hotBidsItem{
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    right: 5px;
+    max-width: calc(25% - 10px);
+    transition: all .45s linear;
+    -webkit-transition: all .45s linear;
+    -moz-transition: all .45s linear;
+    -ms-transition: all .45s linear;
+    -o-transition: all .45s linear;
+    @include sm {
+        max-width: inherit;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    &:hover{
+       background-color: #181921;
+       .hotBidsItem__bottom_right{ 
+            & > p {
+                & > svg >path{
+                    fill: rgb(244, 67, 54);
+                    transition: all .25s linear;
+                    -webkit-transition: all .25s linear;
+                    -moz-transition: all .25s linear;
+                    -ms-transition: all .25s linear;
+                    -o-transition: all .25s linear;
+                }
+            } 
+        }
+    }
+    &:nth-child(4n){ 
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+    &:nth-child(4n+1){ 
+        justify-content: flex-start;
+        margin-left: 0;
+    } 
+    &__top{
+        img{
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            height: 268px;
+            object-fit: cover;
+            @include sm {
+                height: 143px;
+            }
+        }
+    }
+
+    &__bottom{
+        &_right{
+            text-align: right;
+            display: inline-block;
+            position: relative;
+            & > p {
+                display: inline-block;
+                min-width: 90px;
+                text-align: right;
+                & > svg{
+                    text-align: left;
+                    display: inline-block;
+                    margin-right: 15px;
+                    margin-top: -5px;
+                    & > path{
+                        fill:#24252d;
+                    }
+                }
+                & > span{
+                    display: block;
+                    position: relative;
+                    float: right;
+                    right: 10px
+                }
+            }
+        }
+    } 
+}

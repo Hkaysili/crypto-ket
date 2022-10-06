@@ -1,0 +1,32 @@
+// Top Seller- ITEM ~ moduler styling - BEM 
+@import '../../mixin';  
+.topSellerItem{
+    &__inner{ 
+        &_sub{
+            position: absolute;
+            margin-top: 12px;
+            z-index: 10;
+            margin-left: 12px;
+            height: 33px;
+            width: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        &_content{
+            position: relative;
+            img{
+                width: 88px;
+                height: 88px;     
+                transform: scale(.95);
+            }
+            p{
+
+            }
+            span{
+
+            }
+        }
+    }
+}

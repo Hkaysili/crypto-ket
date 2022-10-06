@@ -1,0 +1,19 @@
+// Top Seller moduler styling - BEM 
+@import '../../mixin'; 
+
+.topSeller{
+    margin-top: 60px;
+    &_head{
+        margin-bottom: 30px;
+        .slick-slide{
+            @include sm{
+                transform: translateX(-100vw);
+                left: -100vw;  
+            }
+        }
+        & > h2 {
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }  
+} 

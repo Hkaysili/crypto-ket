@@ -1,0 +1,16 @@
+// HOT BİDS  moduler styling - BEM 
+@import '../../mixin'; 
+
+.hotBids{
+    margin-top: 60px;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 60px;
+    &_head{
+        margin-bottom: 30px;
+        & > h2 {
+            font-size: 28px;
+            line-height: 42px;
+        }
+    }  
+} 
